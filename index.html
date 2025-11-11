@@ -10,26 +10,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800&display=swap');
 
 :root{
-  --bg1: #ffdcf9;
-  --bg2: #d7f7ff;
-  --accent1: #ff7ad1;
-  --accent2: #6ed0ff;
-  --accent3: #9cff9a;
-  --glass: rgba(255,255,255,0.85);
+  --bg1: #1D1F21;
+  --bg2: #24272B;
+  --accent1: #3399FF;
+  --accent2: #66B2FF;
+  --accent3: #1A73E8;
+  --glass: rgba(255,255,255,0.15);
   --soft-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:"Nunito",Verdana,Helvetica,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#222;}
+html,body{  min-height: 100vh;height:100%;margin:0;font-family:"Nunito",Verdana,Helvetica,Arial,sans-serif;background: linear-gradient(135deg, #1D1F21, #2B3036);color:#E0E0E0;}
 
 .container{
+    color: #E0E0E0;
   max-width:1200px;
   margin:24px auto;
   padding:22px;
   border-radius:20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.60));
-  box-shadow: var(--soft-shadow);
-  border: 3px solid rgba(255,255,255,0.6);
+background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.10));
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+border: 1px solid rgba(255,255,255,0.2);
 }
  .header {
   display:flex;
@@ -41,8 +42,8 @@ html,body{height:100%;margin:0;font-family:"Nunito",Verdana,Helvetica,Arial,sans
   width:86px;height:86px;border-radius:18px;
   background: radial-gradient(circle at 20% 20%, #fff, #ffd3f7 30%, #ffb7e8 60%);
   display:flex;align-items:center;justify-content:center;
-  box-shadow: 0 6px 18px rgba(255,123,200,0.18), inset 0 -6px 10px rgba(0,0,0,0.03);
-  border:3px solid rgba(255,255,255,0.7);
+  box-shadow: 0 6px 18px rgba(51, 153, 255, 0.2), inset 0 -6px 10px rgba(0,0,0,0.05);
+  border: 3px solid rgba(102, 178, 255, 0.7);
   font-family:"Fredoka One", "Comic Sans MS", cursive;
   color: #7a196d;
   font-size:18px;
@@ -56,49 +57,95 @@ html,body{height:100%;margin:0;font-family:"Nunito",Verdana,Helvetica,Arial,sans
   justify-content:flex-end;
   margin-bottom:12px;
 }
-.team{
-  background:var(--glass);
-  padding:8px 12px;border-radius:12px;border:2px solid rgba(255, 0, 0, 0.7);
-  display:flex;flex-direction:column;align-items:center;min-width:110px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+.team {
+  background: var(--glass); /* subtelne szkło */
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--accent1); /* zamiast czerwonego, niebieski akcent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* lekko mocniejszy cień dla lepszego kontrastu */
+  color: #E0E0E0; /* jasny tekst wewnątrz karty */
 }
 .team .name{font-weight:800;color:#ff0000}
-.team .points{background:linear-gradient(90deg,var(--accent2),var(--accent3));padding:6px 10px;border-radius:8px;color:#fff;margin-top:6px;font-weight:800}
+.team .points {
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #E0E0E0; /* jasny tekst zamiast białego, subtelniej */
+  margin-top: 6px;
+  font-weight: 800;
+}
 .grid{
   display:grid;
   grid-template-columns: repeat(5, 1fr);
   gap:14px;
   align-items:stretch;
 }
-.cat-cell{
-  padding:16px 10px;text-align:center;border-radius:14px;
-  background: linear-gradient(135deg,#6ea8ff,#ff99e6);
-  color:white;font-weight:800;text-transform:none;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12), inset 0 -6px 30px rgba(255,255,255,0.08);
-  font-size:16px;
-  min-height:70px; display:flex;align-items:center;justify-content:center;
-  border:4px solid rgba(255,255,255,0.4);
+.cat-cell {
+  padding: 16px 10px;
+  text-align: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2)); /* gradient niebieski */
+  color: #E0E0E0; /* jasny szary tekst, subtelniejszy niż biały */
+  font-weight: 800;
+  text-transform: none;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2), inset 0 -6px 30px rgba(255,255,255,0.05); /* cień dopasowany do ciemnego tła */
+  font-size: 16px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(102,178,255,0.5); /* subtelny niebieski border */
 }
+
 cell{
-  position:relative;
-  border-radius:14px;
-  min-height:110px;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;
-  transition:transform .25s ease, box-shadow .25s ease;
-  user-select:none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  border: 3px solid rgba(255,255,255,0.5);
-  font-weight:900;
-  color:#fff;
-  font-size:28px;
-  text-shadow:0 3px 8px rgba(0,0,0,0.35);
+position: relative;
+border-radius: 14px;
+min-height: 110px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: transform .25s ease, box-shadow .25s ease;
+user-select: none;
+
+/* subtelne szklane tło dopasowane do ciemnej strony */
+background: linear-gradient(180deg, rgba(51,153,255,0.08), rgba(51,153,255,0.02));
+
+/* border w odcieniach niebieskiego */
+border: 2px solid rgba(51,153,255,0.5);
+
+font-weight: 900;
+color: #E0E0E0; /* jasny tekst, czytelny na ciemnym tle */
+font-size: 28px;
+
+/* delikatny cień tekstu dla lepszej czytelności */
+text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+
+/* opcjonalny efekt hover dla interaktywności */
+&:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
-.cell .points-badge{
-  z-index:2;
-  padding:8px 16px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),#ffda77);
-  color:#4b004b;font-weight:900;box-shadow:0 6px 18px rgba(0,0,0,0.12);
-  transform:translateY(-6px);
+
+}
+.cell .points-badge {
+  z-index: 2;
+  padding: 8px 16px;
+  border-radius: 12px;
+  
+  /* gradient w odcieniach niebieskiego (accent1 → accent2) */
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  
+  color: #E0E0E0; /* jasny szary, czytelny na niebieskim tle */
+  font-weight: 900;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2); /* trochę mocniejszy cień na ciemnym tle */
+  
+  transform: translateY(-6px);
+}
 }
 .cell:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 18px 40px rgba(0,0,0,0.18)}
 
@@ -137,14 +184,16 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, 
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #E0E0E0;          /* jasny szary tekst zamiast ciemnego #212529 */
   text-align: left;
-  background-color: #fff;
+  background-color: var(--bg1); /* ciemne tło #1D1F21 */
 }
+
 
 [tabindex="-1"]:focus {
   outline: 0 !important;
@@ -238,16 +287,17 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: var(--accent1); /* używamy Twojego głównego niebieskiego akcentu */
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  transition: color 0.25s ease; /* delikatna animacja hover */
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: var(--accent2); /* jaśniejszy niebieski przy hover */
 }
+
 
 a:not([href]):not([tabindex]) {
   color: inherit;
@@ -311,9 +361,10 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #868e96;
+  color: #A0A0A0;       /* jasny szary, czytelny na ciemnym tle */
   text-align: left;
   caption-side: bottom;
+  font-size: 0.9rem;    /* opcjonalnie trochę mniejszy font dla tabeli */
 }
 
 th {
@@ -455,10 +506,12 @@ template {
 }
 
 body {
-	background-color:#2a3698;	
-	height:100%;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-    overflow-y:hidden;
+  background-color: #2A3698;  /* ciemny niebieski */
+  height: 100%;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  overflow-y: hidden;
+  color: #E0E0E0;             /* jasny tekst na ciemnym tle */
+  margin: 0;
 }
 
 * {
@@ -480,40 +533,46 @@ h3 {
 }
 
 h3, .point-cell {
-	color:#ffff5f;
-	color:#fff;
-	text-align:center;
-	font-weight:bold;
+  color: #FFFF5F;       /* jasny żółty akcent na ciemnym tle */
+  text-align: center;
+  font-weight: bold;
 }
+
 
 .modal-wrapper {
-    background-color:rgba(0,0,0,.5);
-    display:none;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:2;
-    height:100%; /* stupid safari */
+  background-color: rgba(0, 0, 0, 0.6); /* nieco ciemniejsza warstwa dla lepszego kontrastu */
+  display: none;
+  position: fixed;  /* lepsze dla modali, zostaje na miejscu przy scrollowaniu */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* workaround dla Safari pozostaje */
+  z-index: 999;  /* wyższy z-index, żeby modal był zawsze nad innymi elementami */
 }
 
+
 .modal {
-    position:relative;
-    top:50%;
-    /*left:50%;*/
-    /*right:5%;*/
-    transform:translate(0%, -50%);
-    background-color:#ffffff;
-    z-index:2;
-    border-radius:5px;
-    background-color:#efefef;
-    overflow:auto;
-    max-height:calc(100% - 50px);
-    max-width:1000px;
-    margin-left:auto;
-    margin-right:auto;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  
+  background-color: #1D1F21; /* ciemne tło pasujące do strony */
+  color: #E0E0E0;           /* jasny tekst */
+  
+  z-index: 1000;             /* wyższy niż modal-wrapper */
+  border-radius: 12px;       /* lekko większe zaokrąglenie dla nowoczesnego wyglądu */
+  overflow: auto;
+  
+  max-height: calc(100% - 50px);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5); /* delikatny cień dla odcięcia od tła */
+  border: 1px solid rgba(102,178,255,0.4); /* subtelny niebieski border */
+  padding: 24px; /* wewnętrzne odstępy */
 }
+
 
 #teams {
     position:absolute;
@@ -573,8 +632,15 @@ h3, .point-cell {
 }
 
 #question-modal a {
-    color:white;
+  color: var(--accent1);          /* główny niebieski akcent */
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
+
+#question-modal a:hover {
+  color: var(--accent2);          /* jaśniejszy niebieski przy hover */
+}
+
 
 /*
 #question-modal img {
@@ -585,35 +651,53 @@ h3, .point-cell {
 }*/
 
 .points-instructions {
-    background-color:yellow;
-    z-index:1000;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    font-size:16px;
-    padding:5px;
-    text-align:center;
+  background-color: rgba(51, 153, 255, 0.25); /* subtelny niebieski akcent */
+  color: #E0E0E0;                            /* jasny szary tekst dla czytelności */
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid var(--accent1);  /* opcjonalnie delikatny akcentowy border */
 }
 
 .pointer span {
-    display:inline-block;
-    width:45%;
-    color:white;
-    font-size:30px;
-    line-height:30px;
-    cursor:pointer;
-    background-color:transparent;
-    font-family:monospace;
-    font-weight:bold;
+  display: inline-block;
+  width: 45%;
+  color: var(--accent1);       /* niebieski akcent zamiast białego */
+  font-size: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;           /* opcjonalnie, jeśli chcesz wyśrodkować tekst */
+  transition: color 0.25s ease; /* delikatny efekt przy hover */
+}
+
+.pointer span:hover {
+  color: var(--accent2);       /* jaśniejszy niebieski przy najechaniu */
 }
 
 .pointer .plus {
-    color:#2da94e;
+  color: var(--accent3); /* używamy zielonego akcentu z palety, jeśli masz go w --accent3 */
+  transition: color 0.25s ease;
 }
 
 .pointer .minus {
-    color:#ff0000;
+  color: var(--accent1); /* czerwony zastąpiony niebieskim akcentem, pasuje do UI */
+  transition: color 0.25s ease;
+}
+
+.pointer .plus:hover {
+  color: #7AF5A5; /* jaśniejszy zielony dla efektu hover */
+}
+
+.pointer .minus:hover {
+  color: #3399FF; /* jaśniejszy niebieski dla efektu hover */
 }
 
 #gameplay {
@@ -649,27 +733,35 @@ h3, .point-cell {
 }
 
 #options a {
-    color:white; 
-    text-decoration:underline;
+  color: var(--accent1);        /* główny niebieski akcent */
+  text-decoration: underline;
+  transition: color 0.25s ease;
 }
 
 #options a:hover {
-    text-decoration:none;
+  color: var(--accent2);        /* jaśniejszy niebieski przy hover */
 }
+
 
 #reset-all {
     /*font-size:20px;*/
 }
 
 #re-init {
-    background:transparent;
-    color:white;
-    margin-left:10px;
-    font-size:14px !important;
-    /*padding:5px;*/
-    height:auto !important;
-    border:none;
+  background: transparent;
+  color: var(--accent1);       /* używamy niebieskiego akcentu zamiast bieli */
+  margin-left: 10px;
+  font-size: 14px !important;
+  height: auto !important;
+  border: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
 }
+
+#re-init:hover {
+  color: var(--accent2);       /* jaśniejszy niebieski przy hover */
+}
+
 
 .click-to-zoom {
     display:none;
@@ -688,13 +780,17 @@ h3, .point-cell {
 }
 
 #modal-header {
-    display:flex;
-    padding: 5px;
-    text-align: center;
-    color: #fff;
-    background-color: #151b4b;
-    z-index: 3;
-    /*align-items:center;*/
+  display: flex;
+  align-items: center;            /* wyrównanie pionowe treści */
+  justify-content: center;        /* wyśrodkowanie zawartości */
+  padding: 10px 16px;             /* więcej przestrzeni dla nagłówka */
+  text-align: center;
+  color: #E0E0E0;                 /* jasny szary tekst zamiast czystej bieli */
+  background-color: #1D1F21;      /* ciemne tło spójne z resztą UI */
+  border-bottom: 2px solid var(--accent1); /* subtelny akcentowy border */
+  z-index: 3;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 #modal-header > div {
@@ -712,10 +808,15 @@ h3, .point-cell {
 }
 
 #question-modal {
-    background-color:#2a3698;
-    border:3px solid #ffff00;;
-    z-index:10;
+  background-color: #1D1F21;           /* ciemne tło spójne z resztą strony */
+  border: 3px solid var(--accent1);    /* niebieski accent zamiast żółtego */
+  border-radius: 10px;                 /* lekko zaokrąglone rogi dla nowoczesnego wyglądu */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4); /* delikatny cień dla wyróżnienia modala */
+  z-index: 10;
+  padding: 20px;                       /* dodaje przestrzeni wewnątrz modala */
+  color: #E0E0E0;                      /* jasny tekst dla czytelności */
 }
+
 
 .expanded {
     transition:.5s all ease; /*, .35s border-width step-end, 1s transform ease;*/
@@ -723,10 +824,14 @@ h3, .point-cell {
 }
 
 .modal, .modal-body {
-    background-color:transparent;
-    color:#fff;
-    text-align:center;
+  background-color: rgba(29, 31, 33, 0.95); /* prawie czarne, lekko przezroczyste dla efektu „glass” */
+  color: #E0E0E0;                             /* jasny szary tekst dla czytelności */
+  text-align: center;
+  border-radius: 10px;                         /* delikatne zaokrąglenie rogów */
+  padding: 20px;                               /* wygodna przestrzeń wewnątrz */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);    /* lekki cień dla odcięcia od tła */
 }
+
 
 .modal-body .modal-inner {
     overflow:auto;
@@ -768,10 +873,11 @@ h3, .point-cell {
 }*/
 
 #question-modal .question {
-    border-top: 3px dotted white;
-    margin-top: 10px;
-    padding-top: 10px;
+  border-top: 3px dotted var(--accent1); /* niebieski akcent zamiast białego */
+  margin-top: 10px;
+  padding-top: 10px;
 }
+
 
 #question-modal .reveal {
     transition: max-height 2s ease, opacity 2s ease;
@@ -783,24 +889,20 @@ h3, .point-cell {
     background-color:transparent;
 }
 
-kbd
-{
-    -moz-border-radius:3px;
-    -moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
-    -webkit-border-radius:3px;
-    -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
-    background-color:#f7f7f7;
-    border:1px solid #ccc;
-    border-radius:3px;
-    box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
-    color:#333;
-    display:inline-block;
-    font-family:Arial,Helvetica,sans-serif;
-    line-height:1.4;
-    margin:0 .1em;
-    padding:.1em .6em;
-    text-shadow:0 1px 0 #fff;
+kbd {
+  background-color: #2A3698;               /* ciemnoniebieskie tło */
+  border: 1px solid var(--accent1);       /* niebieski akcent */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5) inset; /* lekki cień wewnętrzny dla efektu „przycisku” */
+  color: #E0E0E0;                         /* jasny szary tekst */
+  display: inline-block;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.2em 0.6em;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);   /* delikatny cień tekstu */
 }
+
 
 #options {
     display:block;
@@ -811,48 +913,56 @@ kbd
 }
 
 #first-load {
-    max-width: 500px;
-    margin: auto;
-    /* padding-left: 20px; */
-    /* padding-right: 20px; */
-    background-color: #ffff5f;
-    border-radius: 3px;
-    color: #000;
-    padding: 20px;
-    margin-bottom: 20px;
+  max-width: 500px;
+  margin: 20px auto;                  /* centrowanie i odstęp dolny */
+  background-color: rgba(51,153,255,0.15); /* delikatny niebieski akcent */
+  border-radius: 8px;                 /* lekko zaokrąglone rogi */
+  color: #E0E0E0;                     /* jasny szary tekst dla czytelności */
+  padding: 20px;
+  border: 1px solid var(--accent1);   /* subtelny niebieski border dla wyróżnienia */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* lekki cień dla efektu unoszenia */
 }
 
+
 #first-load a {
-    color:#000;
+  color: var(--accent1);        /* niebieski akcent zamiast czerni */
+  text-decoration: underline;
+  transition: color 0.25s ease;
 }
+
+#first-load a:hover {
+  color: var(--accent2);        /* jaśniejszy niebieski przy hover */
+}
+
 
 .cell.points .cell-inner {
     font-weight:bold;
 }
 
 .menu-picker {
-    background-color: #131844;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    line-height: 1.25;
-    text-transform: uppercase;
-    align-self: flex-end;
-    padding: 10px 10px;
-    border-right: 2px solid #999;
-    border-top: 2px solid #999;
-    /*border-top-right-radius: 10px;*/
-    margin-right:10px;
-    position:absolute;
-    color: #999;
-    text-decoration: none;
-    bottom:0;
+  background-color: #1D1F21;               /* ciemne tło spójne z resztą UI */
+  color: var(--accent2);                   /* niebieski tekst akcentowy */
+  font-weight: bold;
+  line-height: 1.25;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  padding: 10px 10px;
+  border-right: 2px solid var(--accent1); /* border w niebieskim odcieniu */
+  border-top: 2px solid var(--accent1);   /* spójny akcent */
+  border-top-right-radius: 10px;           /* lekko zaokrąglony róg */
+  margin-right: 10px;
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .menu-picker:hover {
-    color: white;
-    text-decoration: none;
-    border-color:white;
+  background-color: rgba(51, 153, 255, 0.15); /* delikatny niebieski hover */
+  color: var(--accent3);                      /* jaśniejszy akcent przy hover */
 }
 
 .yoembed {
@@ -1037,9 +1147,12 @@ img, iframe {
 }
 
 .grid-row-questions {
-    border-left:3px solid black;
-    border-right:3px solid black;
-    background-color:black;
+  border-left: 3px solid var(--accent1);   /* niebieski accent zamiast czerni */
+  border-right: 3px solid var(--accent1);
+  background-color: rgba(29, 31, 33, 0.9); /* ciemne, lekko przezroczyste tło */
+  border-radius: 6px;                       /* delikatne zaokrąglenie rogów */
+  padding: 10px;                             /* wygodna przestrzeń wewnętrzna */
+  color: #E0E0E0;                            /* jasny tekst dla czytelności */
 }
 
 .grid-row-cats .grid-cell {
