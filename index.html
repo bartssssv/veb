@@ -6,7 +6,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Testowe etc.</title>
 <style>
-/* --- Bajkowy, kolorowy styl --- */
+	
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800&display=swap');
 
 :root{
@@ -58,23 +58,23 @@ border: 1px solid rgba(255,255,255,0.2);
   margin-bottom:12px;
 }
 .team {
-  background: var(--glass); /* subtelne szkło */
+  background: var(--glass); 
   padding: 8px 12px;
   border-radius: 12px;
-  border: 2px solid var(--accent1); /* zamiast czerwonego, niebieski akcent */
+  border: 2px solid var(--accent1); /
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 110px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* lekko mocniejszy cień dla lepszego kontrastu */
-  color: #E0E0E0; /* jasny tekst wewnątrz karty */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12); 
+  color: #E0E0E0; 
 }
 .team .name{font-weight:800;color:#ff0000}
 .team .points {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   padding: 6px 10px;
   border-radius: 8px;
-  color: #E0E0E0; /* jasny tekst zamiast białego, subtelniej */
+  color: #E0E0E0; 
   margin-top: 6px;
   font-weight: 800;
 }
@@ -88,17 +88,17 @@ border: 1px solid rgba(255,255,255,0.2);
   padding: 16px 10px;
   text-align: center;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2)); /* gradient niebieski */
-  color: #E0E0E0; /* jasny szary tekst, subtelniejszy niż biały */
+  background: linear-gradient(135deg, var(--accent1), var(--accent2)); 
+  color: #E0E0E0; 
   font-weight: 800;
   text-transform: none;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.2), inset 0 -6px 30px rgba(255,255,255,0.05); /* cień dopasowany do ciemnego tła */
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2), inset 0 -6px 30px rgba(255,255,255,0.05); 
   font-size: 16px;
   min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(102,178,255,0.5); /* subtelny niebieski border */
+  border: 2px solid rgba(102,178,255,0.5); 
 }
 
 cell{
@@ -112,20 +112,20 @@ cursor: pointer;
 transition: transform .25s ease, box-shadow .25s ease;
 user-select: none;
 
-/* subtelne szklane tło dopasowane do ciemnej strony */
+
 background: linear-gradient(180deg, rgba(51,153,255,0.08), rgba(51,153,255,0.02));
 
-/* border w odcieniach niebieskiego */
+
 border: 2px solid rgba(51,153,255,0.5);
 
 font-weight: 900;
-color: #E0E0E0; /* jasny tekst, czytelny na ciemnym tle */
+color: #E0E0E0; 
 font-size: 28px;
 
-/* delikatny cień tekstu dla lepszej czytelności */
+
 text-shadow: 0 3px 8px rgba(0,0,0,0.5);
 
-/* opcjonalny efekt hover dla interaktywności */
+
 &:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
@@ -137,12 +137,12 @@ text-shadow: 0 3px 8px rgba(0,0,0,0.5);
   padding: 8px 16px;
   border-radius: 12px;
   
-  /* gradient w odcieniach niebieskiego (accent1 → accent2) */
+
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   
-  color: #E0E0E0; /* jasny szary, czytelny na niebieskim tle */
+  color: #E0E0E0; 
   font-weight: 900;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2); /* trochę mocniejszy cień na ciemnym tle */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2); 
   
   transform: translateY(-6px);
 }
@@ -152,13 +152,6 @@ text-shadow: 0 3px 8px rgba(0,0,0,0.5);
         <base href="https://jeopardylabs.com" />
         
             <style type="text/css">
-            /*!
- * Bootstrap Reboot v4.0.0-beta.2 (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
 *,
 *::before,
 *::after {
@@ -189,9 +182,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #E0E0E0;          /* jasny szary tekst zamiast ciemnego #212529 */
+  color: #E0E0E0;         
   text-align: left;
-  background-color: var(--bg1); /* ciemne tło #1D1F21 */
+  background-color: var(--bg1); 
 }
 
 
@@ -287,15 +280,15 @@ sup {
 }
 
 a {
-  color: var(--accent1); /* używamy Twojego głównego niebieskiego akcentu */
+  color: var(--accent1); 
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  transition: color 0.25s ease; /* delikatna animacja hover */
+  transition: color 0.25s ease; 
 }
 
 a:hover {
-  color: var(--accent2); /* jaśniejszy niebieski przy hover */
+  color: var(--accent2); 
 }
 
 
@@ -361,10 +354,10 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #A0A0A0;       /* jasny szary, czytelny na ciemnym tle */
+  color: #A0A0A0;      
   text-align: left;
   caption-side: bottom;
-  font-size: 0.9rem;    /* opcjonalnie trochę mniejszy font dla tabeli */
+  font-size: 0.9rem;  
 }
 
 th {
@@ -497,7 +490,7 @@ template {
 [hidden] {
   display: none !important;
 }
-/*# sourceMappingURL=bootstrap-reboot.css.map */
+
 
             </style>
 <style type="text/css">
@@ -506,11 +499,11 @@ template {
 }
 
 body {
-  background-color: #2A3698;  /* ciemny niebieski */
+  background-color: #2A3698; 
   height: 100%;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   overflow-y: hidden;
-  color: #E0E0E0;             /* jasny tekst na ciemnym tle */
+  color: #E0E0E0;            
   margin: 0;
 }
 
@@ -533,21 +526,21 @@ h3 {
 }
 
 h3, .point-cell {
-  color: #FFFF5F;       /* jasny żółty akcent na ciemnym tle */
+  color: #FFFF5F;      
   text-align: center;
   font-weight: bold;
 }
 
 
 .modal-wrapper {
-  background-color: rgba(0, 0, 0, 0.6); /* nieco ciemniejsza warstwa dla lepszego kontrastu */
+  background-color: rgba(0, 0, 0, 0.6); 
   display: none;
-  position: fixed;  /* lepsze dla modali, zostaje na miejscu przy scrollowaniu */
+  position: fixed;  
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* workaround dla Safari pozostaje */
-  z-index: 999;  /* wyższy z-index, żeby modal był zawsze nad innymi elementami */
+  height: 100%; 
+  z-index: 999;  
 }
 
 
@@ -556,11 +549,11 @@ h3, .point-cell {
   top: 50%;
   transform: translate(0%, -50%);
   
-  background-color: #1D1F21; /* ciemne tło pasujące do strony */
-  color: #E0E0E0;           /* jasny tekst */
+  background-color: #1D1F21; 
+  color: #E0E0E0;           
   
-  z-index: 1000;             /* wyższy niż modal-wrapper */
-  border-radius: 12px;       /* lekko większe zaokrąglenie dla nowoczesnego wyglądu */
+  z-index: 1000;             
+  border-radius: 12px;    
   overflow: auto;
   
   max-height: calc(100% - 50px);
@@ -568,9 +561,9 @@ h3, .point-cell {
   margin-left: auto;
   margin-right: auto;
   
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5); /* delikatny cień dla odcięcia od tła */
-  border: 1px solid rgba(102,178,255,0.4); /* subtelny niebieski border */
-  padding: 24px; /* wewnętrzne odstępy */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5); 
+  border: 1px solid rgba(102,178,255,0.4); 
+  padding: 24px; 
 }
 
 
@@ -582,10 +575,7 @@ h3, .point-cell {
     right:0;
     z-index:11;
     display:flex;
-    /*display:none;*/
-    /*
-    align-items:baseline;
-    justify-content:space-around;*/
+
 }
 
 #teams .team {
@@ -632,27 +622,16 @@ h3, .point-cell {
 }
 
 #question-modal a {
-  color: var(--accent1);          /* główny niebieski akcent */
+  color: var(--accent1);         
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 #question-modal a:hover {
-  color: var(--accent2);          /* jaśniejszy niebieski przy hover */
-}
-
-
-/*
-#question-modal img {
-    width: auto;
-    height: auto;
-    max-height: 100%;
-    max-width: 100%;
-}*/
-
+  color: var(--accent2);          
 .points-instructions {
-  background-color: rgba(51, 153, 255, 0.25); /* subtelny niebieski akcent */
-  color: #E0E0E0;                            /* jasny szary tekst dla czytelności */
+  background-color: rgba(51, 153, 255, 0.25); 
+  color: #E0E0E0;                            
   z-index: 1000;
   position: absolute;
   top: 0;
@@ -661,43 +640,43 @@ h3, .point-cell {
   font-size: 16px;
   padding: 5px;
   text-align: center;
-  border-bottom: 1px solid var(--accent1);  /* opcjonalnie delikatny akcentowy border */
+  border-bottom: 1px solid var(--accent1);  
 }
 
 .pointer span {
   display: inline-block;
   width: 45%;
-  color: var(--accent1);       /* niebieski akcent zamiast białego */
+  color: var(--accent1);      
   font-size: 30px;
   line-height: 30px;
   cursor: pointer;
   background-color: transparent;
   font-family: monospace;
   font-weight: bold;
-  text-align: center;           /* opcjonalnie, jeśli chcesz wyśrodkować tekst */
-  transition: color 0.25s ease; /* delikatny efekt przy hover */
+  text-align: center;           
+  transition: color 0.25s ease; 
 }
 
 .pointer span:hover {
-  color: var(--accent2);       /* jaśniejszy niebieski przy najechaniu */
+  color: var(--accent2);       
 }
 
 .pointer .plus {
-  color: var(--accent3); /* używamy zielonego akcentu z palety, jeśli masz go w --accent3 */
+  color: var(--accent3);
   transition: color 0.25s ease;
 }
 
 .pointer .minus {
-  color: var(--accent1); /* czerwony zastąpiony niebieskim akcentem, pasuje do UI */
+  color: var(--accent1); 
   transition: color 0.25s ease;
 }
 
 .pointer .plus:hover {
-  color: #7AF5A5; /* jaśniejszy zielony dla efektu hover */
+  color: #7AF5A5; 
 }
 
 .pointer .minus:hover {
-  color: #3399FF; /* jaśniejszy niebieski dla efektu hover */
+  color: #3399FF; 
 }
 
 #gameplay {
@@ -733,23 +712,22 @@ h3, .point-cell {
 }
 
 #options a {
-  color: var(--accent1);        /* główny niebieski akcent */
+  color: var(--accent1);        
   text-decoration: underline;
   transition: color 0.25s ease;
 }
 
 #options a:hover {
-  color: var(--accent2);        /* jaśniejszy niebieski przy hover */
+  color: var(--accent2);        
 }
 
 
 #reset-all {
-    /*font-size:20px;*/
 }
 
 #re-init {
   background: transparent;
-  color: var(--accent1);       /* używamy niebieskiego akcentu zamiast bieli */
+  color: var(--accent1);       
   margin-left: 10px;
   font-size: 14px !important;
   height: auto !important;
@@ -759,7 +737,7 @@ h3, .point-cell {
 }
 
 #re-init:hover {
-  color: var(--accent2);       /* jaśniejszy niebieski przy hover */
+  color: var(--accent2);      
 }
 
 
@@ -781,13 +759,13 @@ h3, .point-cell {
 
 #modal-header {
   display: flex;
-  align-items: center;            /* wyrównanie pionowe treści */
-  justify-content: center;        /* wyśrodkowanie zawartości */
-  padding: 10px 16px;             /* więcej przestrzeni dla nagłówka */
+  align-items: center;            
+  justify-content: center;        
+  padding: 10px 16px;           
   text-align: center;
-  color: #E0E0E0;                 /* jasny szary tekst zamiast czystej bieli */
-  background-color: #1D1F21;      /* ciemne tło spójne z resztą UI */
-  border-bottom: 2px solid var(--accent1); /* subtelny akcentowy border */
+  color: #E0E0E0;                 
+  background-color: #1D1F21;      
+  border-bottom: 2px solid var(--accent1); 
   z-index: 3;
   font-weight: bold;
   font-size: 1.1rem;
@@ -808,28 +786,28 @@ h3, .point-cell {
 }
 
 #question-modal {
-  background-color: #1D1F21;           /* ciemne tło spójne z resztą strony */
-  border: 3px solid var(--accent1);    /* niebieski accent zamiast żółtego */
-  border-radius: 10px;                 /* lekko zaokrąglone rogi dla nowoczesnego wyglądu */
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4); /* delikatny cień dla wyróżnienia modala */
+  background-color: #1D1F21;           
+  border: 3px solid var(--accent1);    
+  border-radius: 10px;                 
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
   z-index: 10;
-  padding: 20px;                       /* dodaje przestrzeni wewnątrz modala */
-  color: #E0E0E0;                      /* jasny tekst dla czytelności */
+  padding: 20px;
+  color: #E0E0E0;
 }
 
 
 .expanded {
-    transition:.5s all ease; /*, .35s border-width step-end, 1s transform ease;*/
+    transition:.5s all ease; 
     border-width:0;
 }
 
 .modal, .modal-body {
-  background-color: rgba(29, 31, 33, 0.95); /* prawie czarne, lekko przezroczyste dla efektu „glass” */
-  color: #E0E0E0;                             /* jasny szary tekst dla czytelności */
+  background-color: rgba(29, 31, 33, 0.95); 
+  color: #E0E0E0;                             
   text-align: center;
-  border-radius: 10px;                         /* delikatne zaokrąglenie rogów */
-  padding: 20px;                               /* wygodna przestrzeń wewnątrz */
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);    /* lekki cień dla odcięcia od tła */
+  border-radius: 10px;                         
+  padding: 20px;                               
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);   
 }
 
 
@@ -873,7 +851,7 @@ h3, .point-cell {
 }*/
 
 #question-modal .question {
-  border-top: 3px dotted var(--accent1); /* niebieski akcent zamiast białego */
+  border-top: 3px dotted var(--accent1); 
   margin-top: 10px;
   padding-top: 10px;
 }
@@ -890,17 +868,17 @@ h3, .point-cell {
 }
 
 kbd {
-  background-color: #2A3698;               /* ciemnoniebieskie tło */
-  border: 1px solid var(--accent1);       /* niebieski akcent */
+  background-color: #2A3698;              
+  border: 1px solid var(--accent1);      
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5) inset; /* lekki cień wewnętrzny dla efektu „przycisku” */
-  color: #E0E0E0;                         /* jasny szary tekst */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5) inset; 
+  color: #E0E0E0;                       
   display: inline-block;
   font-family: monospace, Arial, Helvetica, sans-serif;
   line-height: 1.4;
   margin: 0 0.1em;
   padding: 0.2em 0.6em;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.4);   /* delikatny cień tekstu */
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);   
 }
 
 
@@ -914,24 +892,24 @@ kbd {
 
 #first-load {
   max-width: 500px;
-  margin: 20px auto;                  /* centrowanie i odstęp dolny */
-  background-color: rgba(51,153,255,0.15); /* delikatny niebieski akcent */
-  border-radius: 8px;                 /* lekko zaokrąglone rogi */
-  color: #E0E0E0;                     /* jasny szary tekst dla czytelności */
+  margin: 20px auto;                 
+  background-color: rgba(51,153,255,0.15); 
+  border-radius: 8px;               
+  color: #E0E0E0;                     
   padding: 20px;
-  border: 1px solid var(--accent1);   /* subtelny niebieski border dla wyróżnienia */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* lekki cień dla efektu unoszenia */
+  border: 1px solid var(--accent1);   
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
 }
 
 
 #first-load a {
-  color: var(--accent1);        /* niebieski akcent zamiast czerni */
+  color: var(--accent1);        
   text-decoration: underline;
   transition: color 0.25s ease;
 }
 
 #first-load a:hover {
-  color: var(--accent2);        /* jaśniejszy niebieski przy hover */
+  color: var(--accent2);        
 }
 
 
@@ -940,8 +918,8 @@ kbd {
 }
 
 .menu-picker {
-  background-color: #1D1F21;               /* ciemne tło spójne z resztą UI */
-  color: var(--accent2);                   /* niebieski tekst akcentowy */
+  background-color: #1D1F21;               
+  color: var(--accent2);                 
   font-weight: bold;
   line-height: 1.25;
   text-transform: uppercase;
@@ -949,9 +927,9 @@ kbd {
   justify-content: center;
   align-self: flex-end;
   padding: 10px 10px;
-  border-right: 2px solid var(--accent1); /* border w niebieskim odcieniu */
-  border-top: 2px solid var(--accent1);   /* spójny akcent */
-  border-top-right-radius: 10px;           /* lekko zaokrąglony róg */
+  border-right: 2px solid var(--accent1); 
+  border-top: 2px solid var(--accent1);   
+  border-top-right-radius: 10px;           
   margin-right: 10px;
   position: absolute;
   bottom: 0;
@@ -961,8 +939,8 @@ kbd {
 }
 
 .menu-picker:hover {
-  background-color: rgba(51, 153, 255, 0.15); /* delikatny niebieski hover */
-  color: var(--accent3);                      /* jaśniejszy akcent przy hover */
+  background-color: rgba(51, 153, 255, 0.15); 
+  color: var(--accent3);                      
 }
 
 .yoembed {
@@ -1147,12 +1125,12 @@ img, iframe {
 }
 
 .grid-row-questions {
-  border-left: 3px solid var(--accent1);   /* niebieski accent zamiast czerni */
+  border-left: 3px solid var(--accent1);   
   border-right: 3px solid var(--accent1);
-  background-color: rgba(29, 31, 33, 0.9); /* ciemne, lekko przezroczyste tło */
-  border-radius: 6px;                       /* delikatne zaokrąglenie rogów */
-  padding: 10px;                             /* wygodna przestrzeń wewnętrzna */
-  color: #E0E0E0;                            /* jasny tekst dla czytelności */
+  background-color: rgba(29, 31, 33, 0.9); 
+  border-radius: 6px;                      
+  padding: 10px;                           
+  color: #E0E0E0;                           
 }
 
 .grid-row-cats .grid-cell {
